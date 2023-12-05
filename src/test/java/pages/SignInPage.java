@@ -18,10 +18,7 @@ public class SignInPage {
     private WebElement email;
 
     public void signInWithValidData(){
-        getEmail().sendKeys("emilyjohnson202324@gmail.com", Keys.TAB,"Duotech2023",Keys.ENTER);
+        getEmail().sendKeys("johndoe@gmail.com", Keys.TAB,"Duotech2023",Keys.ENTER);
     }
 
-    public void assertUrl(){
-        Assert.assertEquals("http://qa-duobank.us-east-2.elasticbeanstalk.com/index.php", Driver.getDriver().getCurrentUrl());
-    }
 }
