@@ -11,10 +11,6 @@ import org.openqa.selenium.safari.SafariDriver;
 
 public class Driver {
 
-
-
-
-    // For this design pattern to work properly, you will need to call Driver.getDriver() everytime you need a WebDriver
     private static ThreadLocal<WebDriver> drivers = new ThreadLocal<>();
 
 
