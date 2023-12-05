@@ -25,6 +25,7 @@ public class LoanApplicationsStepDefs {
         Assert.assertEquals("http://qa-duobank.us-east-2.elasticbeanstalk.com/dashboard.php", getDriver().getCurrentUrl());
     }
 
+
     @Then("the user is on the My Applications page")
     public void the_user_is_on_the_my_applications_page() {
         loanApplicationsPage.getApplicationListButton().click();
