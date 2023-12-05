@@ -25,14 +25,14 @@ public class LoanApplicationsStepDefs {
         Assert.assertEquals("http://qa-duobank.us-east-2.elasticbeanstalk.com/dashboard.php", getDriver().getCurrentUrl());
     }
 
-    @Given("the user is on the My Applications page")
+    @Then("the user is on the My Applications page")
     public void the_user_is_on_the_my_applications_page() {
         loanApplicationsPage.getApplicationListButton().click();
         Assert.assertEquals("http://qa-duobank.us-east-2.elasticbeanstalk.com/applications.php", getDriver().getCurrentUrl());
     }
 
     @Then("the dropdown should contain the following options:")
-    public void then_the_dropdown_should_contain_following_options(List<Integer> options) throws InterruptedException {
+    public void the_dropdown_should_contain_the_following_options(List<Integer> options)  {
         Select dropdown = new Select((WebElement) loanApplicationsPage.getDropDown());
         List<WebElement> actualOptions = dropdown.getOptions();
         for (int i = 0; i < options.size(); i++) {
@@ -41,7 +41,13 @@ public class LoanApplicationsStepDefs {
             Assert.assertEquals(Integer.parseInt(actualOptionText), expectedOptionValue);
         }
     }
+
+
+
+
+
 }
+
 /*
     @Then("the user enters {string} in the search field")
     public void the_user_enters_in_the_search_field(String string) {
