@@ -20,7 +20,7 @@ public class PersonalInfoStepDef {
         loginPage.getMortgageApp().click();
         preapprovalDetailsPage.fillAllSections();
         preapprovalDetailsPage.getNextButton().click();
-        SeleniumUtils.waitFor(1);
+        SeleniumUtils.waitFor(2);
         Assert.assertTrue(personalInfoPage.getH6().isDisplayed());
     }
 
