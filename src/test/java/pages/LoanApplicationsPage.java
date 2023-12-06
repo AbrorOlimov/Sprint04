@@ -20,6 +20,9 @@ public class LoanApplicationsPage {
 
     @FindBy(xpath = "//select[@class= 'custom-select custom-select-sm form-control form-control-sm']")
     private WebElement dropDown;
+    
+    @FindBy(xpath = "//td[@role='row']")
+    private List<WebElement> LoadIds;
 
 }
 

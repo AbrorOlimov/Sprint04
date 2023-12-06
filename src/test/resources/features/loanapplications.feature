@@ -11,5 +11,4 @@ Feature: View and Manage Submitted Loan Applications
       | 25  |
       | 50  |
       | 100 |
-
-
+    And each load id should be an integer number
