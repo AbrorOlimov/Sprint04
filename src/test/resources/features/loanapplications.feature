@@ -1,3 +1,4 @@
+@positive
 Feature: View and Manage Submitted Loan Applications
 
   Background:

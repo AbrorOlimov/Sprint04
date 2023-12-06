@@ -1,11 +1,11 @@
 package pages;
 
 import lombok.Data;
-import org.junit.Assert;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import utils.ConfigReader;
 import utils.Driver;
 
 @Data
@@ -18,7 +18,7 @@ public class SignInPage {
     private WebElement email;
 
     public void signInWithValidData(){
-        getEmail().sendKeys("johndoe@gmail.com", Keys.TAB,"Duotech2023",Keys.ENTER);
+        getEmail().sendKeys(ConfigReader.getProperty("email"), Keys.TAB,ConfigReader.getProperty("password"),Keys.ENTER);
     }
 
 }
