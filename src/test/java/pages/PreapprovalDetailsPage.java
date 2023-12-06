@@ -35,6 +35,9 @@ public class PreapprovalDetailsPage {
     @FindBy(linkText = "Next")
     private WebElement nextButton;
 
+    @FindBy(xpath = "(//h6)[1]")
+    private WebElement upperText;
+
 
     public void fillAllSections() {
         if (!getRealtorYesCheck().isSelected()) {
